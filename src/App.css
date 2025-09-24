@@ -34,6 +34,22 @@
   gap: 30px;
 }
 
+.option2{
+  display: flex;
+  gap: 30px;
+}
+.option2 button{
+  list-style: none;
+  display: flex;
+  color: white;
+  background-color: black;
+}
+
+.option2 button.color{
+  color:black;
+  background-color: white;
+}
+
 .option li.active{
   border-bottom: 3px solid white;
 }
@@ -65,4 +81,8 @@
 button{
   padding: 10px 15px;
   border-radius: 15px;
+}
+
+.dropdown{
+  color: white;
 }
