@@ -6,7 +6,6 @@ import "./App.css";
 import { useState } from "react";
 export default function App(){
   const[active,setActive]=useState("Home");
-  const[color,setColor]=useState("Home");
   return(
     <div className="outerWrapper">
       <nav className="navFirst">
@@ -15,7 +14,9 @@ export default function App(){
           {["Home", 
           "Services ˅", 
           "Forum", 
-          "Contact us"].map((item) => (
+          "Contact us"].map((item) => {
+            return(
+            
             <li
               key={item}
               className={active === item ? "active" : ""}
@@ -23,7 +24,7 @@ export default function App(){
             >
               {item}
             </li>
-          ))}
+          )})}
         </ul>
         <div className="rightSide">
           <img className="theme" src={theme} alt="theme" />
@@ -32,22 +33,6 @@ export default function App(){
             <IoIosArrowDropdown className="dropdown" />
           </div>
         </div>
-      </nav>
-      <nav className="navSecond">
-        <ul className="option2">
-          {["Home", 
-          "Services ˅", 
-          "Forum", 
-          "Contact us"].map((item) => (
-            <button
-              key={item}
-              className={color === item ? "color" : ""}
-              onClick={() => setColor(item)}
-            >
-              {item}
-            </button>
-          ))}
-        </ul>
       </nav>
     </div>
   );
